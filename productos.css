@@ -1,0 +1,442 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&family=Roboto&display=swap");
+
+:root {
+  --blanco: #fff;
+  --blanco-carta: #e4e4e4;
+  --azul: #3475ca;
+  --negro: #111;
+  --azul-oscuro: #162c3b;
+  --azul-service: #07182e;
+  --naranja: #f88d2b;
+  --naranja-oscuro: #c7701f;
+  --gris: #3d4543;
+  --gris-oscuro: #333;
+  --fondo-header: #f5f5f5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+/* --- Inicio Globales --- */
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: #111;
+}
+
+[class*="heading"] {
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 900;
+  color: var(--primary);
+  margin: 2rem 0;
+}
+
+@media ( min-width: 769px ) { 
+  [class*="heading"] {
+    margin: 4rem 0;
+  }
+} 
+
+[class*="contenedor"] {
+  max-width: 120rem;
+  margin: 0 auto;
+  width: 95%;
+}
+
+/* --- Fin Globales --- */
+
+/* --- Inicio Producto --- */
+
+.producto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6rem;
+}
+
+@media ( min-width: 769px ) { 
+  .producto {
+    margin-bottom: 2rem;
+  }
+} 
+
+.producto__heading span {
+  display: block;
+}
+
+.producto__grid {
+  display: grid;
+  gap: 4rem;
+}
+
+@media ( min-width: 769px ) { 
+  .producto__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+} 
+
+.video {
+  position: relative;
+  background: var(--blanco);
+  width: 100%;
+  height: 100%;
+  border-radius: 0.625rem;
+  overflow: hidden;
+  box-shadow: 0 0.3125rem 1.25rem rgba(0, 0, 0, 0.1);
+}
+
+.video__content {
+  width: 100%;
+}
+
+/* --- Fin Producto --- */
+
+/* --- Inicio Footer --- */
+
+.footer {
+  position: fixed;
+  width: 100%;
+  background: var(--azul-oscuro);
+  padding: 1.25rem 6.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin: 0;
+  bottom: 0;
+}
+
+.footer .text {
+  color: var(--blanco);
+  font-size: 1.2rem;
+}
+
+/* --- Fin Footer --- */
+
+/* --- Start of Media Querys --- */
+
+@media (max-width: 1050px) {
+  .wrapper {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-section {
+    margin: 0.5rem;
+    padding: 0.75rem;
+    top: 2rem;
+  }
+
+  .servicios-bio {
+    margin-left: 0;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .team {
+    padding: 15rem 3rem;
+  }
+
+  .card-list {
+    gap: 0.3em;
+  }
+
+  .card {
+    display: flex;
+    justify-content: center;
+    margin: 0.75rem;
+    flex-direction: column;
+  }
+
+  .card-botton {
+    width: 90%;
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .footer {
+    padding: 0.2rem 2rem;
+    flex-direction: column;
+  }
+
+  .footer .text {
+    font-size: 1.2rem;
+  }
+
+  .footer ul {
+    margin-top: 0.2rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    height: 8rem;
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: center;
+    padding: 0.8rem;
+    gap: 2rem;
+  }
+
+  .header.scrolled {
+    height: 5rem;
+  }
+
+  .logo-image {
+    padding: 0.8rem;
+    width: 30%;
+    transition: 0.3s ease-in-out;
+  }
+
+  .logo-image:hover {
+    scale: 1.1;
+  }
+
+  .nav-list {
+    gap: 0.6rem;
+  }
+
+  .nav-item {
+    margin-right: 0.7rem;
+    margin-bottom: 0;
+  }
+
+  .nav-item li {
+    font-size: 1.4rem;
+  }
+
+  .heading {
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+  }
+
+  .container {
+    padding: 5rem 0rem;
+  }
+
+  .teamBx {
+    width: 45%;
+  }
+
+  .box h2 {
+    font-size: 2rem;
+  }
+
+  .box h2 span {
+    font-size: 1.5rem;
+  }
+
+  .content {
+    padding: 0.4rem 0.6rem;
+  }
+
+  .content span {
+    font-size: 0.9rem;
+  }
+
+  .card-botton {
+    font-size: 0.9rem;
+    margin-left: 0.75rem;
+    width: 90%;
+  }
+}
+
+@media (max-width: 700px) {
+  .header {
+    height: 8rem;
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .logo-image {
+    width: 60%;
+    margin-left: 2.3rem;
+  }
+
+  .navigation {
+    width: 60%;
+    margin-right: 2rem;
+  }
+
+  .nav-list {
+    padding-bottom: 0.5rem;
+    position: relative;
+    top: 0.5rem;
+    margin-right: 1rem;
+  }
+
+  .nav-item li {
+    font-size: 1rem;
+  }
+
+  .team {
+    padding: 10rem 3rem;
+  }
+
+  .heading {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .container {
+    padding: 0.5rem 0rem;
+  }
+
+  .teamBx {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .wrapper {
+    margin-top: 15rem;
+  }
+
+  .header {
+    height: 8rem;
+    padding-top: 0.5rem;
+  }
+
+  .header-container {
+    margin-top: 0.5rem;
+    gap: 0.05rem;
+    flex-direction: column;
+  }
+
+  .header.scrolled .header-container {
+    margin-top: 0;
+  }
+
+  .header.scrolled {
+    height: 5rem;
+  }
+
+  .logo {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .header.scrolled .logo {
+    margin-top: 1rem;
+  }
+
+  .logo-image {
+    padding-bottom: 0.3rem;
+    padding: 0;
+    width: 40%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .navigation {
+    display: flex;
+    height: 100%;
+    width: 70%;
+    transition: 0.3s ease-in-out;
+    margin-right: 0;
+  }
+
+  .nav-list {
+    padding-bottom: 0.5rem;
+    position: relative;
+    top: -0.5rem;
+  }
+
+  .header.scrolled .nav-list {
+    display: none;
+  }
+
+  .nav-item {
+    margin: 0 auto;
+  }
+
+  .nav-item li {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .heading {
+    margin-top: 0.1rem;
+    margin-bottom: 4rem;
+    font-size: 2.5rem;
+    width: 100%;
+  }
+
+  .container {
+    margin-top: 1rem;
+    padding: 0rem 0rem;
+  }
+
+  .teamBx {
+    width: 45%;
+    margin: 0.7rem auto;
+    max-height: 15rem;
+  }
+
+  .box h2 {
+    font-size: 1.2rem;
+  }
+
+  .box h2 span {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .card-botton {
+    width: 100%;
+    font-size: 1.5rem;
+    margin-top: 0.1rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .footer {
+    width: 100%;
+  }
+
+  .footer .text {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  .footer p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .wrapper {
+    margin-top: 8rem;
+  }
+
+  .heading {
+    margin-bottom: 1rem;
+  }
+}
+
+/* --- End of Media Querys --- */
